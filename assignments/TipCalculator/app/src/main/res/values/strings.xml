@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="tip_amounts_will_display_here">Tip amounts will display here</string>
+    <string name="calculate_tip">Calculate Tip</string>
+    <string name="enter_bill_total">Enter Bill Total</string>
+    <string name="you_must_enter_a_bill_amount">YOU MUST ENTER A BILL AMOUNT</string>
+    <string name="output">The tips are as follows: \n\n 10%% = %1$s \n 15%% = %2$s \n 20%% = %3$s</string>
+</resources>
