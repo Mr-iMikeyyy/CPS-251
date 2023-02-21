@@ -1,5 +1,6 @@
 package mdmccullough.wccnet.edu.addnamesavedataviewmodel.ui.main
 
+import android.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -32,13 +33,20 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
-        binding.displayNames.text = viewModel.getResult().toString()
+        binding.displayNames.text = viewModel.getResult()
 
         binding.addName.setOnClickListener {
             if (binding.editTextName.text.isNotEmpty()) {
                 viewModel.setDisplayText(binding.editTextName.text.toString())
-                binding.displayNames.text = viewModel.getResult().toString()
-            } 
+                binding.displayNames.text = viewModel.getResult()
+            }else {
+                val builder = AlertDialog.Builder(this.context)
+
+                builder.setTitle("No Name Entered")
+                builder.setMessage("Please enter a name in the enter name area")
+                val alert = builder.create()
+                alert.show()
+            }
         }
     }
 
