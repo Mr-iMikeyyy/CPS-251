@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import mdmccullough.wccnet.edu.addnamesavedataviewmodel.R
 import mdmccullough.wccnet.edu.addnamesavedataviewmodel.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
