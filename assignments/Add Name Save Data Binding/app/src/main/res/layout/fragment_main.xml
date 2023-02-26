@@ -20,7 +20,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@{myViewModel.displayNames}"
+        android:text="@{myViewModel.displayNames.isEmpty() ? @string/no_names_to_display : myViewModel.displayNames}"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
