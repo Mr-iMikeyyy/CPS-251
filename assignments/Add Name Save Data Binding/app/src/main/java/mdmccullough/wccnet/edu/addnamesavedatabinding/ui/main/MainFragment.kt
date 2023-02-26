@@ -1,6 +1,7 @@
 package mdmccullough.wccnet.edu.addnamesavedatabinding.ui.main
 
 import android.app.AlertDialog
+import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -35,7 +36,18 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        viewModel.isNameEmpty.observe(viewLifecycleOwner) { isEmpty ->
+            if (isEmpty) {
+                showEmptyNameAlert()
+                viewModel.isNameEmpty.value = false
+            }
+        }
     }
-
+    private fun showEmptyNameAlert() {
+        val alertDialogBuilder = AlertDialog.Builder(requireContext())
+        alertDialogBuilder.setTitle(R.string.error_title)
+        alertDialogBuilder.setMessage(R.string.error_message)
+        alertDialogBuilder.setPositiveButton(R.string.ok) { _, _ -> }
+        alertDialogBuilder.create().show()
+    }
 }

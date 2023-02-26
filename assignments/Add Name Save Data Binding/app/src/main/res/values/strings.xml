@@ -4,4 +4,7 @@
     <string name="add_name">Add Name</string>
     <string name="enter_name">Enter Name</string>
     <string name="please_enter_a_name">Please Enter A Name</string>
+    <string name="error_title">Error</string>
+    <string name="error_message">Please enter a name</string>
+    <string name="ok">OK</string>
 </resources>
