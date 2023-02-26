@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Add Name Save Data Binding</string>
+    <string name="no_names_to_display">No names to display</string>
+    <string name="add_name">Add Name</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="please_enter_a_name">Please Enter A Name</string>
+</resources>
