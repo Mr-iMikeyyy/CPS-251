@@ -33,8 +33,6 @@ class MainActivity : AppCompatActivity() {
 
         coroutineScope.launch(Dispatchers.Main) {
             startCoroutine()
-
-
         }
     }
 
